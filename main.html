@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Final Project Website</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="topbar">
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <h1>AI Final Project Website</h1>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-title">Menu</div>
+
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#team" onclick="toggleMenu()">Our Team</a>
+    <a href="#poster" onclick="toggleMenu()">Poster</a>
+    <a href="#dataset" onclick="toggleMenu()">Dataset</a>
+    <a href="#graphs" onclick="toggleMenu()">Graph Results</a>
+    <a href="#video" onclick="toggleMenu()">Video</a>
+    <a href="#about" onclick="toggleMenu()">About Project</a>
+  </nav>
+
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Home -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="tag">Artificial Intelligence Final Project</p>
+
+      <h2>Skill-Based Job Role Predictor</h2>
+
+      <p class="subtitle">
+        Supervised Machine Learning for Multi-Class Job Category Classification
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#poster" class="btn">View Poster</a>
+        <a href="#video" class="btn secondary">Watch Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Project -->
+  <section id="about" class="section">
+    <div class="section-header">
+      <p>About Project</p>
+      <h2>What is this project?</h2>
+    </div>
+
+    <div class="card">
+      <p>
+        <strong>Skill-Based Job Role Predictor</strong> is a supervised machine learning project
+        that predicts a job category from a given list of skills and qualifications.
+      </p>
+
+      <p>
+        The model takes skills as input and predicts one of five categories:
+        <strong>Information Technology, Business Development, Finance, Sales, and HR.</strong>
+      </p>
+
+      <p>
+        The project uses TF-IDF vectorization to convert skill text into numerical features,
+        then trains classical machine learning models such as Random Forest, SVM, and Naive Bayes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section id="team" class="section">
+    <div class="section-header">
+      <p>Our Team</p>
+      <h2>Project Members</h2>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="assets/miras.jpg" alt="Myngzhas Miras">
+        <h3>Myngzhas Miras</h3>
+        <p>Team Member</p>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/aibat.jpg" alt="Sarsembay Aibat">
+        <h3>Sarsembay Aibat</h3>
+        <p>Team Member</p>
+      </div>
+
+      <div class="team-card">
+        <img src="assets/asylkeney.jpg" alt="Tynybekuly Asylkeney">
+        <h3>Tynybekuly Asylkeney</h3>
+        <p>Team Member</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Poster -->
+  <section id="poster" class="section">
+    <div class="section-header">
+      <p>Poster</p>
+      <h2>Project Poster</h2>
+    </div>
+
+    <div class="card">
+      <img class="poster-img" src="assets/final_poster.png" alt="Project Poster">
+
+      <a class="btn download" href="assets/final_poster.png" target="_blank">
+        Open Poster PNG
+      </a>
+    </div>
+  </section>
+
+  <!-- Dataset -->
+  <section id="dataset" class="section">
+    <div class="section-header">
+      <p>Dataset</p>
+      <h2>Cleaned Job Dataset</h2>
+    </div>
+
+    <div class="dataset-grid">
+      <div class="info-card">
+        <h3>1,167</h3>
+        <p>Cleaned Job Posts</p>
+      </div>
+
+      <div class="info-card">
+        <h3>5</h3>
+        <p>Target Classes</p>
+      </div>
+
+      <div class="info-card">
+        <h3>3</h3>
+        <p>Main Columns</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Dataset Columns</h3>
+
+      <ul>
+        <li><strong>category</strong> — target job category</li>
+        <li><strong>job_title</strong> — job position name</li>
+        <li><strong>job_skill_set</strong> — list of required skills</li>
+      </ul>
+
+      <a class="btn download" href="assets/all_job_post_cleaned.csv" download>
+        Download Dataset CSV
+      </a>
+    </div>
+  </section>
+
+  <!-- Graph Results -->
+  <section id="graphs" class="section">
+    <div class="section-header">
+      <p>Graph Results</p>
+      <h2>Model Evaluation Visuals</h2>
+    </div>
+
+    <div class="graph-grid">
+      <div class="graph-card">
+        <h3>Confusion Matrix</h3>
+        <img src="assets/confusion_matrix.png" alt="Confusion Matrix">
+        <a href="assets/confusion_matrix.png" target="_blank">Open PNG</a>
+      </div>
+
+      <div class="graph-card">
+        <h3>Learning Curve</h3>
+        <img src="assets/learning_curve.png" alt="Learning Curve">
+        <a href="assets/learning_curve.png" target="_blank">Open PNG</a>
+      </div>
+
+      <div class="graph-card">
+        <h3>Feature Importance</h3>
+        <img src="assets/feature_importance.png" alt="Feature Importance">
+        <a href="assets/feature_importance.png" target="_blank">Open PNG</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Results -->
+  <section class="section">
+    <div class="section-header">
+      <p>Main Results</p>
+      <h2>Model Performance</h2>
+    </div>
+
+    <div class="results-card">
+      <div class="accuracy-box">
+        <h3>82.1%</h3>
+        <p>Overall Accuracy</p>
+      </div>
+
+      <div class="result-list">
+        <p><strong>Finance:</strong> 98.1%</p>
+        <p><strong>Information Technology:</strong> 89.3%</p>
+        <p><strong>HR:</strong> 85.7%</p>
+        <p><strong>Business Development:</strong> 76.2%</p>
+        <p><strong>Sales:</strong> 53.7%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="section">
+    <div class="section-header">
+      <p>Video</p>
+      <h2>Public Demo Video</h2>
+    </div>
+
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/embed/buv096iwD2I"
+        title="Skill-Based Job Role Predictor Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+      <a class="btn download" href="https://youtu.be/buv096iwD2I?si=3cVjDniwkHCOaCxo" target="_blank">
+        Open on YouTube
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Machine Learning Project | Classification | Workforce Analytics</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
